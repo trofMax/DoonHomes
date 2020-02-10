@@ -1,0 +1,2280 @@
+// variables
+
+$titleColor: #171B22;
+$regularColor: #454B56;
+
+// variables END
+
+/* -- Browser style reset -- */
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 1em;
+	font-family: 'Axiforma';
+	position: relative;
+}
+a {
+	text-decoration: none;
+	color: $regularColor;
+}
+ul {
+	list-style: none;
+	li {
+		display: inline;
+	}
+}
+/* -- //Browser style reset -- */
+
+h1,h2 {
+	font-weight: bold;
+	color: $titleColor;
+	font-size: 2.25em;
+}
+
+h3,h5 {
+	font-weight: 600;	
+	color: $titleColor;
+	font-size: 1.75em;
+}
+
+p {
+	color: $regularColor;
+}
+
+.wrap {
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.page-list {
+	list-style: disc;
+	li {
+		display: list-item;
+		color: #4DB248;
+	}
+}
+
+.img-responsive {
+	max-width: 100%;
+	min-height: auto;
+	display: block;
+}
+
+// Header
+
+header {
+	width: 100%;
+	border-bottom: 1px solid #DAE6EA;
+}
+.header_inside {
+	max-width: 1290px;
+	height: 90px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header_inside_nav {
+	position: relative;
+}
+
+.mob-navigation {
+	display: none;
+}
+
+.main-nav_item {
+		position: relative;
+		top: 5px;
+		margin-right: 67px;
+		padding-bottom: 26px;
+		border-radius: 3px;
+		box-sizing: border-box;
+		color: $regularColor;
+		a {
+			img {
+				position: relative;
+				top: 6px;
+			}
+		}
+		&:hover {
+			border-bottom: 3px solid #4DB248;
+			a {
+				color: $titleColor;
+			}
+		}
+		ul {
+			display: none;
+
+			li {
+				display: block;
+				margin-top: 10px;
+				font-weight: 500;
+				transition: 0.4s;
+				&:hover {
+					transform: translateX(5px);
+				}
+			}
+		}
+
+		&:hover ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: 260px;
+			height: 200px;
+			position: absolute;
+			top: 45px;
+			left: 0;
+			background: #fff;
+			box-shadow: 5px 5px 15px rgba(69, 75, 86, 0.05);
+			padding-left: 30px;
+		}
+	}
+.nav-item__active {
+	border-bottom: 3px solid #4DB248;
+}
+.header_inside_phone {
+	display: flex;
+	align-items: center;
+	img {
+		margin-right: 20px;
+	}
+}
+
+.phone-numbers {
+	display: flex;
+	flex-direction: column;
+}
+
+.header-banner {
+	width: 100%;
+	height: 800px;
+	background: url(../images/home-main.jpg) left center no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn {
+	background: #C12026;
+	color: #fff;
+	border-radius: 16px;
+	transition: 0.5s;
+	outline: none;
+	&:hover {
+		transform: translateY(-5px);
+		cursor: pointer;
+		box-shadow: 5px 5px 60px #C12026;
+	}
+}
+
+.header-banner__btn {
+	width: 270px;
+	height: 80px;
+	font-size: 1.125em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// Header END
+
+// Main Start
+
+main {
+	max-width: 1290px;
+	margin: 0 auto;
+}
+
+// Features section 
+
+.features-section {
+	margin-top: 60px;
+	display: flex;
+	border: 1px solid #E3F0F4;
+	box-sizing: border-box;
+	border-radius: 8px;
+}
+
+.features-section_item {
+	width: 20%;
+	border: 1px solid #E3F0F4;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 50px 0 40px 0px;
+	p {
+		line-height: 26px;
+		font-size: 1.125em;
+		font-weight: 500;
+		color: $titleColor;
+		margin-top: 10px;
+	}
+}
+
+// Features section END
+
+//Services section
+
+.services-section {
+	margin-top: 100px;
+}
+
+.services-section_title {
+	text-align: center;
+}
+
+.services-section_row {
+	margin-top: 80px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.services-section_row_col {
+	width: 48.5%;
+	img {
+		min-height: 100%;
+	}
+}
+
+.services-section_row_col-2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;	
+}
+
+.services-section_row_col-2, .services-section_row_col-3 {
+	width: 23.5%;
+}
+
+.services-section_row_col_title {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	z-index: 1;
+	h3 {
+		color: #fff;
+	}
+	div {
+		width: 30px;
+		height: 3px;
+		background: #C12026;
+	}
+}
+.services-section_row_col, .services-section_row_col-2_item, .services-section_row_col-3 {
+	transition: 0.5s;
+	position: relative;
+	z-index: 1;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+.services-section_row_col_link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+// Services section END
+
+// Testimonials section
+
+.testimonials-section {
+	margin-top: 80px;
+	margin-bottom: 120px;
+}
+
+.testimonials-section_title {
+	text-align: center;
+}
+
+.testimonials-slider {
+	margin: 0 auto;
+	margin-top: 80px;
+	width: 92%;
+}
+
+.testimonials-slider_item {
+	margin: 0 40px;
+}
+
+.testimonial-name {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.125em;
+	font-weight: bold;
+	color: $titleColor;
+	img {
+		margin-right: 10px;
+	}
+	span {
+		display: flex;
+	}
+	.comment-date {
+		color: #71777E;
+		font-size: 14px;
+		font-weight: normal;
+	}
+}
+
+.testimonial-location {
+	font-weight: 500;
+	color: $titleColor;
+}
+
+.stars {
+	margin-top: 10px;
+}
+
+.testimonial-comment {
+	margin-top: 20px;
+}
+
+// Testimonials section
+
+// Footer
+
+.footer-wrap {
+	background: #171B22;
+	p, a {
+		color: #fff;
+	}
+}
+
+footer {
+	max-width: 1290px;
+	margin: 0 auto;
+}
+
+.copyright {
+	text-transform: uppercase;
+}
+
+.footer_inside_copyright {
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #232D3A;
+	p {
+		font-size: 0.875em;
+	}
+}
+
+.footer_inside_nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 80px 0 30px 0;
+
+	h4 {
+		font-size: 1.125em;
+		color: #4DB248;
+		font-weight: 500;
+	}
+
+	a {
+		font-size: 1em;
+		display: block;
+		line-height: 36px;
+	}
+}
+
+.footer_inside_nav_item {
+	width: 19.5%;
+}
+
+.footer_inside_nav_item_link {
+	margin-top: 39px;
+
+	.footer-tel, .footer-tel2 {
+		margin-top: 20px;
+		font-size: 1.25em;
+	}
+	.footer-tel2 {
+		margin-top: 0;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.footer_inside_nav_contact-us {
+	width: 22%;
+	p {
+		line-height: 24px;
+	}
+}
+
+.footer-social {
+	display: flex;
+	align-items: center;
+}
+
+.inst-icon {
+	position: relative;
+	top: 6.5px;
+	left: 20px;
+}
+
+.footer-logo {
+	position: absolute;
+	bottom: 10%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	img:last-child {
+		margin-left: 50px;
+	}
+}
+
+// Footer END
+
+
+// Our Company Page Start
+
+// Second pages main wrap
+.second-pages_main-wrap {
+	background: linear-gradient(#F6FAFB,#fff);
+	padding-top: 30px;
+}
+// Second pages main wrap END
+
+// Categories map
+.categories-map {
+	a {
+		font-size: 0.875em;
+	}
+}
+
+.current-visited-page {
+	text-decoration: underline;
+	color: #676F7D;
+}
+// Categories map END
+
+// Page Content
+
+.page-content {
+	padding: 0 0 50px 115px;
+	width: 60%;
+	p {
+		line-height: 30px;
+	}
+}
+
+.our-company_page-content {
+	width: 95%;
+	padding-left: 10%;
+}
+
+.page-title {
+	margin: 100px 0 60px 0;
+	h1 {
+		line-height: 59px;
+	}
+}
+
+.our-company_inside {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.our-company_inside__fullw {
+	width: 100%;
+	margin-left: 0;
+}
+
+.our-company_inside_item_left {
+	img {
+		border-radius: 10px;
+	}
+}
+
+.our-company-page_list {
+	margin-top: 50px;
+	margin: 50px 0 50px 17.5%;
+	li {
+		font-size: 25px;
+	}
+	b {
+		font-size: 18px;
+		color: $titleColor;
+	}
+}
+
+// Page Content END
+
+// Our Company Page END
+
+
+// Why Doon page Start
+
+.why-doon_page-content {
+	width: 82.5%;
+
+}
+
+.why-doon_page-content_inside {
+	display: flex;
+	justify-content: space-between;
+}
+
+.why-doon_page-content_inside__left {
+	width: 40%;
+}
+
+.why-doon_page-content_inside__right {
+	width: 40%;
+	position: relative;
+	bottom: 110px;
+	.why-doon_text {
+		margin-top: 60px;
+	}
+}
+
+.why-doon_item-wrap {
+	margin-top: 50px;
+}
+.why-doon-item {
+	display: flex;
+	align-items: center;
+	background: #fff;
+	height: 70px;
+	margin-bottom: 20px;
+	box-shadow: 0px 5px 30px rgba(36, 47, 60, 0.04);
+	border-radius: 16px;
+	padding-left: 31px;
+	p {
+		margin-left: 31px;
+		color: $titleColor;
+		font-weight: 500;
+	}
+}
+
+// Why Doon page END
+
+// Testimonials Page
+
+.testimonials_page-content {
+	padding-bottom: 70px;
+	.page-title {
+		text-align: center;
+	}
+}
+
+// Testimonials page END
+
+
+// Service Areas Page
+
+.service-areas_page-content {
+	width: 83.5%;
+}
+.service-areas_inside {
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.servise-areas_inside__left {
+	width: 34%;
+}
+.servise-areas_inside__center, .servise-areas_inside__right {
+	width: 20%;
+	position: relative;
+	bottom: 100px;
+}
+
+.service-areas_list_title {
+	font-size: 1.125em;
+	line-height: 29px;
+}
+
+.service-areas_list {
+	margin-top: 35px;
+	margin-left: 19px;
+	font-size: 1.125em;
+	li {
+		margin-bottom: 15px;
+	}
+	span {
+		color: $regularColor;
+	}
+}
+
+// Service Areas Page END
+
+
+// New Homes Page
+
+.new-homes_list {
+	li {
+		margin-bottom: 30px;
+	}
+	span {
+		color: $titleColor;
+		font-weight: 500;
+	}
+	margin-top: 30px;
+}
+
+.new-homes_inside {
+	display: flex;
+	align-items: flex-start;
+	padding-left: 40px;
+	margin-top: 80px;
+}
+
+.new-homes_inside_text {
+	width: 70%;
+	margin-left: 80px;
+}
+
+// New Homes Page END
+
+// Houses and Land Packages Page
+
+.houses-and-land_page-content {
+	padding-bottom: 100px;
+}
+
+// Houses and Land Packages Page END
+
+
+// Custom Homes Page
+
+.custom-homes_page-content {
+	padding-bottom: 100px;
+
+	.page-title {
+		margin-top: 60px;
+	}
+}
+
+.custom-homes_inside {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 100px;
+}
+.our-company_inside {
+	margin-top: 80px;
+}
+
+.custom-homes_inside_item_left {
+	position: relative;
+	width: 48.5%;
+	img:first-child {
+		margin-bottom: 30px;
+	}
+}
+.custom-homes_inside_item_right {
+	position: relative;
+	width: 38.5%;
+	h1 {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.custom-homes_inside_second-row_item {
+	margin-top: 50px;
+
+	.custom-homes_inside_item__text {
+		margin-top: 90px;
+	}
+	img:first-child {
+		margin-bottom: 0;
+	}
+	img {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.our-company_inside_second-row_item {
+	width: 100%;
+	margin-top: 0;
+	.custom-homes_inside_item__text {
+		margin-top: 50px;
+	}
+}
+
+.custom-homes_inside_item__text {
+	margin-top: 60px;
+}
+
+.green-circle-sm, .green-circle-sm-2 {
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+	background: #4DB248;
+	position: absolute;
+	z-index: 1;
+	top: -28px;
+	left: -55px;
+}
+
+.green-circle-sm-2 {
+	top: 50px;
+	left: 175px;
+}
+
+.green-circle-lg {
+	width: 160px;
+	height: 160px;
+	border-radius: 80px;
+	background: #4DB248;
+	position: absolute;
+	z-index: 1;
+	bottom: -80px;
+	left: -80px;
+}
+
+.green-circle-sm-2 {
+	display: none;
+}
+
+// Custom Homes Page END
+
+
+// Terms and Conditions Page
+
+.terms-and-conditions_page-content {
+
+	b {
+		color: $titleColor;
+		font-size: 1.125em;
+	}
+}
+
+// Terms and Conditions Page END
+
+
+// Contact Us page
+
+.contact-us_page-content {
+	width: 90%;
+}
+
+.cu-mob2 {
+	position: relative;
+	left: 61.5px;
+}
+
+.contact-us_inside {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contact-us_inside__left {
+	width: 60%;
+}
+
+.contact-us_inside__right {
+	position: relative;
+	h3 {
+		font-size: 1.5em;
+		line-height: 39px;
+		z-index: 2;
+		position: relative;
+	}
+
+	.green-circle-sm {
+		width: 50px;
+		height: 50px;
+		top: -18px;
+		left: -27px;
+	}
+}
+
+.form_item {
+	margin-top: 30px;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	input {
+		width: 100%;
+		height: 60px;
+		padding-left: 20px;
+	}
+
+	p {
+		color: $titleColor;
+	}
+}
+
+.form-field {
+	border: 1px solid #BFD3DC;
+	box-sizing: border-box;
+	border-radius: 8px;
+	outline: none;
+	font-size: 1em;
+	font-family: 'Axiforma';
+}
+
+.message-area {
+	resize: none;
+	width: 100%;
+	height: 180px;
+	padding: 20px;
+}
+
+
+
+.form-button {
+	width: 270px;
+	height: 80px;
+	font-size: 1.25em;
+	border: none;
+	margin-top: 60px;
+}
+
+.thank-you-page_inside {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 80px 0 160px 0;
+}
+
+.success-message {
+	box-shadow: 0 0 30px grey;
+	width: 50%;
+	padding: 80px 0;
+	.btn {
+		width: 150px;
+		height: 55px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		margin-top: 30px;
+		border: none;
+		background: #4DB248;
+		img {
+			margin-left: 10px;
+			position: relative;
+			bottom: 2.5px;
+		}
+	}
+}
+
+// Contact Us page END
+
+
+// Our Designs Page
+
+.design-page_wrap {
+	background: #fff;
+}
+
+.our-designs_page-content {
+
+	padding-bottom: 70px;
+
+	.page-title {
+		text-align: center;
+	}
+}
+
+.our-designs_inside {
+	display: flex;
+	justify-content: space-between;
+}
+
+.tab-content_item__title {
+	h3 {
+		color: #4DB248;
+	}
+}
+
+.tabs_wrap {
+	display: flex;
+	width: 60%;
+	align-items: center;
+	b {
+		font-size: 1.125em;
+		color: $titleColor;
+	}
+}
+
+.tabs_wrap_inside {
+	margin-left: 50px;
+	display: flex;
+	width: 100%;
+	border: 1px solid #BFD3DC;
+	box-sizing: border-box;
+	border-radius: 8px;
+	height: 60px;
+}
+
+.tab {
+	text-align: center;
+	box-sizing: border-box;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.tab-active {
+	background: #4DB248;
+	border: none;
+	p {
+		color: #fff;
+	}
+}
+
+.tab-1 {
+	width: 25%;
+	border-right: 1px solid #BFD3DC;
+}
+
+.tab-2 {
+	border-right: 1px solid #BFD3DC;
+}
+
+.tab-2, .tab-3 {
+	width: 37.5%;
+}
+
+.tabs-content_wrap {
+	margin-top: 80px;
+}
+
+.tab-showing-results {
+	margin-bottom: 40px;
+	font-size: 1.125em;
+	font-weight: 600;
+	color: $titleColor;
+}
+.tab-content {
+	display: none;
+}
+.tab-content_items___wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.tab-content_item {
+	width: 49%;
+	border: 1px solid #BFD3DC;
+	box-sizing: border-box;
+	border-radius: 12px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tab-content_item__mt {
+	margin-top: 30px;
+}
+
+.tab-content_item__left {
+	width: 45%;
+	p {
+		white-space: nowrap;
+	}
+	padding: 50px 0 50px 30px;
+
+	ul {
+		margin-top: 34px;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		white-space: nowrap;
+		li {
+			background: #EAF1F6;
+			padding: 5px 10px;
+			border-radius: 10px;
+			&:first-child {
+				margin-left: 0;
+			}
+			margin-left: 10px;
+			
+		}
+		span {
+			color: #4DB248;
+			margin-left: 10px;
+		}
+	}
+}
+
+.dimensions {
+	margin: 15px 0 10px 0;
+	color: $titleColor;
+}
+
+.tab-content_item__spec {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	white-space: nowrap;
+	span {
+		margin-left: 10px;
+		width: 30%;
+	}
+	small {
+		position: relative;
+		bottom: 5px;
+	}
+
+}
+
+.explore_btn {
+	margin-top: 40px;
+	width: 180px;
+	height: 60px;
+	background: #C12026;
+	a {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
+	&:hover {
+		box-shadow: none;
+		transform: translate(0);
+	}
+}
+
+.tab-content_item__right {
+	position: relative;
+	.explore_btn {
+		display: none;
+	}
+}
+
+.zoom-in {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 2;
+}
+
+
+// Our Designs Page END
+
+
+// Explore Page
+
+.explore_inside {
+	margin-top: 100px;
+}
+
+.explore-item_wrap {
+	margin-top: 80px;
+}
+
+.explore-item {
+	width: 100%;
+	background: #fff;
+	border: none;
+}
+
+.explore-item__left {
+	width: 25%;
+}
+
+.explore-item__right {
+	width: 60%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 10%;
+	.download_btn {
+		display: none;
+	}
+}
+
+.img-magnifier-container {
+	position: relative;
+	z-index: 1;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 300px;
+  height: 300px;
+  z-index: 2;
+}
+
+.explore-item_spec__wrap {
+	margin-top: 50px;
+}
+
+.download_btn {
+	width: 100%;
+	margin-top: 30px;
+	position: relative;
+	z-index: 2;
+}
+
+.ambert-20-img {
+	position: relative;
+	z-index: 1;
+}
+
+.zoom-img {
+	cursor: pointer;
+}
+
+.popup {
+	position: fixed;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	display:none;
+	text-align:center;
+	z-index: 2;
+}
+
+.popup_bg {
+	background:rgba(0,0,0,0.4);
+	position:absolute;
+	z-index:2;
+	height:100%;
+	width:100%;
+}
+
+
+.popup_img {
+	position: relative;
+	margin:0 auto;
+	z-index:2;
+	max-height:90%;
+	width: 30%;
+	margin:1% 0 0 0;
+}
+
+.close {
+	position: absolute;
+	right: 32px;
+	top: 32px;
+	width: 32px;
+	height: 32px;
+	opacity: 1;
+	&:before, &:after {
+		position: absolute;
+		left: 15px;
+		content: ' ';
+		height: 33px;
+		width: 2px;
+		background-color: #333;
+	}
+	&:before {
+		transform: rotate(45deg);
+	}
+	&:after {
+		transform: rotate(-45deg);
+	}
+}
+
+// Explore Page END
+
+
+// Responsive Start
+
+@media screen and (max-width: 1328px) {
+	.header_inside, footer, main {
+		max-width: 1100px;
+	}
+
+	// Custom Homes Page
+
+	.green-circle-lg {
+		bottom: 20px;
+		left: -75px;
+	}
+
+	// Custom Homes Page END
+
+	.tab-content_item__spec {
+		font-size: 85%;
+	}
+
+}
+
+@media screen and (max-width: 1135px) {
+
+	// Header
+	.header_inside, footer, main {
+		max-width: 950px;
+	}
+	.header_inside_nav {
+		font-size: 95%;
+	}
+	.main-nav_item {
+		margin-right: 40px;
+	}
+	// Header END
+
+	// Services section
+	.services-section_row_col_title {
+		font-size: 90%;
+	}
+	// Services section END
+
+	
+	// Custom Homes Page
+
+	.custom-homes_page-content {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.custom-homes_inside_item_left {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		img {
+			width: 48.5%;
+		}
+		img:first-child {
+			margin-bottom: 0;
+		}
+	}
+	.custom-homes_inside_item_right {
+		width: 90%;
+		margin-left: 10%;
+		margin-top: 90px;
+	}
+
+	.our-company_inside_item_right {
+		margin-top: 40px;
+		margin-left: 5%;
+	}
+
+	.custom-homes_inside_second-row_item {
+		margin-top: 70px;
+	}
+	
+	.our-company_inside_second-row_item {
+		margin-top: 0;
+	}
+	.custom-homes_inside_second-row_item__order1 {
+		order: 1;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.custom-homes_inside_second-row_item__order2 {
+		order: 2;
+	}
+
+	.green-circle-lg {
+		bottom: -80px;
+		left: 43.5%;
+	}
+
+	// Custom Homes Page END
+
+
+	// Explore Page
+	.explore-item__left {
+		width: 32%;
+	}
+
+	.explore-item__right {
+		width: 64%;
+	}
+
+	// Explore Page END
+
+	.footer-logo {
+		bottom: 3%;
+	}
+
+}
+
+@media screen and (max-width: 980px) {
+
+	// Header
+	.header_inside, footer, main {
+		max-width: 95%;
+	}
+	.wrap {
+		font-size: 95%;
+	}
+	.main-nav_item {
+		margin-right: 30px;
+	}
+	.header_inside_logo {
+		margin-right: 10px;
+	}
+	// Header END
+
+	// Contact Us Page
+
+	.contact-us_inside__right {
+
+		width: 35%;
+	}
+
+	// Contact Us page END
+
+}
+
+@media screen and (max-width: 900px) {
+
+	// Mobile navigation start
+
+	.mob-navigation {
+		display: block;
+		li {
+			display: block;
+		}
+	}
+	.header_inside_nav, .header_inside_phone {
+		display: none;
+	}
+	.header_inside {
+		position: relative;
+	}
+	.header-banner {
+		height: 600px;
+	}
+	.menu-icon {
+		height: 20px;
+		width: 25px;
+		position: relative;
+		right: 20px;
+	}
+	.menu-icon:hover {
+		cursor: pointer;
+	}
+	.menu-icon:hover .menu-icon__bar {
+		opacity: 0.6;
+	}
+	.menu-icon__bar {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		height: 2px;
+		width: 100%;
+		background-color: #000;
+		display: block;
+		transition: opacity 0.3s ease;
+	}
+	.menu-icon__bar::before, .menu-icon__bar::after {
+		height: 2px;
+		width: 100%;
+		content: "";
+		background-color: #000;
+		display: block;
+		position: absolute;
+		transition: -webkit-transform 0.5s ease;
+		transition: transform 0.5s ease;
+		transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+	}
+	.menu-icon__bar::before {
+		top: -10px;
+	}
+	.menu-icon__bar::after {
+		bottom: -10px;
+	}
+	.menu-icon--open .menu-icon {
+		position: relative;
+	}
+	.menu-icon--open .menu-icon__bar {
+		background: transparent;
+	}
+	.menu-icon--open .menu-icon__bar::before, .menu-icon--open .menu-icon__bar::after {
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	.menu-icon--open .menu-icon__bar::after {
+		-webkit-transform: rotate(135deg);
+		transform: rotate(135deg);
+	}
+	.menu-icon--open .menu-icon__bar::before {
+		-webkit-transform: rotate(-135deg);
+		transform: rotate(-135deg);
+	}
+
+	.nav-mob {
+		padding: 20px;
+		position: absolute;
+		right: -50px;
+		top: -1400px;
+		background-color: #fff;
+		transition: top 0.6s ease;
+		width: 70%;
+		z-index: 99;
+	}
+	.nav-mob--active {
+		position: absolute;
+		top: 91px;
+		right: -22.3px;
+	}
+	.nav__list {
+		padding-left: 0;
+		list-style: none;
+	}
+	.nav__item {
+		margin-bottom: 10px;
+		text-align: left;
+	}
+	.nav__link {
+		position: relative;
+		color: $regularColor;
+		text-decoration: none;
+		img {
+			position: relative;
+			top: 6px;
+		}
+	}
+	.nav__link:hover {
+		opacity: 0.6;
+	}
+	.nav__sub-list {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 10px;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+		display: none;
+		list-style: none;
+		padding-left: 10px;
+	}
+	.nav__sub-list--active {
+		display: block;
+	}
+	.nav__sub-item .nav__link {
+		color: $regularColor;
+	}
+	.nav__sub-item:not(:last-child) {
+		padding-bottom: 10px;
+	}
+
+	.mob-phone {	
+		margin-top: 30px;
+		display: flex;
+	}
+	.mob-phone-2 {
+		position: relative;
+		left: 27px;
+	}
+
+	// Mobile navigation END
+
+	// features section
+	
+	.features-section {
+		flex-wrap: wrap;
+		justify-content: center;
+		border-style: none;
+	}
+	.features-section_item {
+		width: 30%;
+		margin: 5px;
+		padding: 50px 0 40px 0px;
+	}
+
+	// features section END
+
+	// services section
+
+	.services-section_row {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.services-section_row_col {
+		width: 48.5%;
+		margin: 0 10px;
+		img {
+			min-height: 100%;
+		}
+	}
+
+	.services-section_row_col-2 {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;	
+	}
+
+	.services-section_row_col-2 {
+		width: 100%;
+		order: 2;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 20px;
+	}
+	.services-section_row_col-2_item {
+		margin: 0 10px;
+	}
+	.services-section_row_col-3 {
+		order: 28.5%;
+		margin: 0 10px;
+	}
+
+	//services section END
+
+	// footer
+
+	.footer_inside {
+		font-size: 90%;
+	}
+	.inst-icon {
+		left: 5px;
+	}
+	// footer END
+
+
+	// Why Doom
+	
+	.why-doon_page-content_inside {
+		flex-wrap: wrap;
+	}
+	.why-doon_page-content_inside__left {
+		width: 90%;
+	}
+
+	.why-doon_page-content_inside__right {
+		width: 90%;
+		position: static;
+	}
+
+	// Why Doon Page END
+
+	// Service Areas Page
+
+.service-areas_page-content {
+	width: 83.5%;
+}
+.service-areas_inside {
+	flex-wrap: wrap;	
+}
+.servise-areas_inside__left {
+	width: 90%;
+}
+.servise-areas_inside__center, .servise-areas_inside__right {
+	width: 50%;
+	position: static;
+	margin-top: 35px;
+}
+
+// Service Areas Page END
+
+
+// New Homes Page
+
+.new-homes_page-content {
+	width: 100%;
+	padding-left: 0;
+}
+
+.new-homes_inside {
+	padding-left: 0;
+	margin-top: 80px;
+}
+
+.new-homes_inside_text {
+	width: 75%;
+	margin-left: 5%;
+}
+
+// New Homes Page END
+
+// Contact Us page
+
+.contact-us_page-content {
+	width: 90%;
+}
+
+.contact-us_inside {
+	flex-wrap: wrap;
+}
+
+.contact-us_inside__left {
+	width: 90%;
+}
+
+.contact-us_inside__right {
+	display: none;
+}
+
+// Contact Us page END
+
+// Our Designs Page
+
+.tab-content_item__mt {
+	margin-top: 0;
+}
+
+.tab-content_item {
+	&:first-child {
+		margin-top: 0;
+	}
+	width: 100%;
+	margin-top: 30px;
+}
+
+.tab-content_item__left {
+	width: 39%;
+	p {
+		white-space: nowrap;
+	}
+	padding: 50px 0 50px 30px;
+
+}
+
+.tab-content_item__spec {
+	span {
+		width: 45%;
+	}
+}
+
+// Our Designs Page
+
+// Explore Page
+	.explore-item__left {
+		width: 30%;
+		.tab-content_item__spec {
+			span {
+				width: 30%;
+			}
+		}
+	}
+	
+	.explore-item__right {
+		width: 70%;
+		position: relative;
+		top: 50px; 
+	}
+	
+	.popup_img {
+		margin-top: 3%;
+		width: 80%;
+	}
+
+	// Explore Page END
+
+}
+
+@media screen and (max-width: 768px) {
+
+	// Heeader
+
+	.header_inside_logo {
+		img {
+			width: 180px;
+		}
+	}
+	.header-banner {
+		height: 400px;
+	}
+	
+	.header-banner__btn {
+		width: 230px;
+		height: 60px;
+	}
+	// HEader END
+
+	// Footer
+	.footer_inside_copyright {
+		height: 80px;
+	}
+
+	.footer_inside_nav {
+		justify-content: center;
+		padding: 80px 0 100px 0;
+		flex-wrap: wrap;
+	}
+
+	.footer_inside_nav_item {
+		width: 30%;
+		text-align: left;
+	}
+
+	.footer_inside_nav_item_link {
+		margin-top: 25px;
+	}
+	.footer_inside_nav_item__doom-homes {
+		margin-top: 30px;
+	}
+	.footer_inside_nav_contact-us {
+		width: 60%;
+		margin-top: 30px;
+	}
+	.inst-icon {
+		position: relative;
+		top: 6.5px;
+		left: 20px;
+	}
+
+	.footer-logo {
+		left: 6%;
+	}
+
+	// Footer END
+	
+	.our-company_inside_item_right {
+		margin-top: 0;
+	}
+
+	.page-title {
+		margin: 30px 0;
+	}
+
+	// Custom Homes Page
+
+	.custom-homes_page-content {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.custom-homes_page-content {
+		.page-title {
+			margin-top: 40px;
+		}
+	}
+
+	.custom-homes_inside {
+		margin-top: 10px;
+	}
+
+	.custom-homes_inside_item_left {
+		flex-direction: column;
+		align-items: center;
+		img {
+			width: auto;
+		}
+		img:first-child {
+			margin: 30px 0;
+		}
+		order: 2;
+	}
+	.custom-homes_inside_item_right {
+		width: 90%;
+		margin-left: 0%;
+		order: 1;
+	}
+
+	.custom-homes_inside_second-row_item__order1 {
+		order: 4;
+	}
+
+	.custom-homes_inside_second-row_item__order2 {
+		order: 3;
+		margin-top: 120px;
+		.custom-homes_inside_item__text {
+			margin-top: 60px;
+		}
+	}
+
+	.green-circle-lg {
+		display: none;
+	}
+
+	.green-circle-sm-2 {
+		display: block;
+	}
+
+// Custom Homes Page END
+
+// About Us Page
+.success-message {
+	width: 90%;
+	padding: 50px 0;
+}
+// About Us Page END
+
+
+// Explore Page 
+
+.explore-item__left {
+	width: 34%;
+	font-size: 90%;
+}
+
+.explore-item__right {
+	width: 64%;
+}
+
+.explore-item_spec__wrap {
+	margin-top: 50px;
+}
+
+// Eplore page END
+
+}
+
+@media screen and (max-width: 680px) {
+	// services section
+	.services-section_row_col_title {
+		font-size: 70%;
+	}
+	.services-section_row_col {
+		width: 58.5%;
+	}
+	.services-section_row_col-3 {
+		width: 32.5%;
+	}
+	//services section END
+	
+	// features section	
+	.features-section_item {
+		width: 48%;
+		margin: 5px;
+		padding: 50px 0 40px 0px;
+	}
+	// features section END
+
+
+	// Our Company page
+
+	.page-content {
+		padding: 0 0 50px 10%;
+		width: 90%;
+		p {
+			line-height: 30px;
+		}
+	}
+
+	// Our Company page END
+
+
+	// New Homes Page
+
+	.new-homes_page-content {
+		width: 100%;
+		padding-left: 0;
+	}
+
+	// New Homes Page END
+
+	// Our Desings Page
+
+	.tabs_wrap {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.tab {
+		p {
+			font-size: 0.82em;
+		}
+	}
+
+	.tab-content_item__spec {
+		span {
+			width: 30%;
+		}
+	}
+
+	// Our Designs Page
+
+	// Our Desings Page END
+
+	// Contact Us
+
+	.form-button_wrap {
+		text-align: center;
+	}
+
+	// Contact Us END
+
+}
+
+@media screen and (max-width: 568px) {
+
+	// Heeader
+
+	.header-banner {
+		height: 350px;
+	}
+	
+	.header-banner__btn {
+		width: 200px;
+		height: 55px;
+	}
+	// HEader END
+
+	// features section	
+	.features-section {
+		
+	}
+	.features-section_item {
+		width: 45%;
+		font-size: 80%;
+		padding: 20px;
+		img {
+			width: 30px;
+		}
+	}
+	// features section END
+
+	// services section
+	.services-section_row {
+		justify-content: space-between;
+	}
+	.services-section_row_col {
+		width: 100%;
+		margin: 0;
+	}
+	.services-section_row_col-2 {
+		width: 48.5%;
+		margin: 20px 0;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.services-section_row_col-2_item {
+		width: 100%;
+		margin: 0;	
+	}
+	.services-section_row_col-3 {
+		width: 48.5%;
+		margin: 20px 0;
+	}
+	//services section END
+
+	// footer
+	.footer_inside_nav {
+		justify-content: center;
+	}
+	.footer_inside_nav_item {
+		width: 40%;
+	}
+	.footer_inside_nav_contact-us {
+		width: 80%;
+		margin-top: 30px;
+	}
+	.footer_inside_nav_item__doom-homes, .footer_inside_nav_item__services {
+		margin-top: 20px;
+	}
+	// footer END
+
+	// Service Areas Page
+
+	.service-areas_page-content {
+		width: 95%;
+		padding-left: 5%;
+	}
+
+	.service-areas_list_title {
+		font-size: 1em;
+	}
+
+	// Service Areas Page END
+
+
+	// New Homes Page
+
+	.new-homes_page-content {
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.new-homes_inside {
+		display: block;
+		text-align: center;
+		img {
+			width: 100px;
+		}
+		
+	}
+
+	.new-homes_inside_text {
+		text-align: left;
+		width: 90%;
+		margin: 30px 0 0 8%;
+	}
+
+	// New Homes Page END
+
+	// Our Design Page
+
+	.our-designs_inside {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.tabs_wrap {
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.tabs_wrap_inside {
+		margin: 20px 0;	
+	}
+
+	// Our Design Page END
+
+	// Our Designs Page
+	.explore-item {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.explore-item__left {
+		width: 100%;
+		.download_btn {
+			display: none;
+		}
+	}
+
+	.explore-item__right {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-left: 0;
+		padding-bottom: 50px;
+		img:not(.zoom-in) {
+			width: 80%;
+			position: relative;
+			left: 50px;
+		}
+		.download_btn {
+			display: flex;
+		}
+	}
+
+
+	
+
+	.download_btn {
+		margin: 0 auto;
+		margin-top: 34px;
+	}
+
+	.explore-item__left {
+		.tab-content_item__spec {
+			width: 50%;
+			
+		}
+	}
+
+	.zoom-in {
+		right: 0%;
+		top: 0px;
+	}
+
+	.popup_img {
+		margin-top: 10%;
+		width: 80%;
+		
+	}
+
+	.close {
+		top: 1%;
+		right: 1%;
+	}
+
+	// Our Designs Page END
+
+}
+
+@media screen and (max-width: 480px) {
+	// footer
+	.footer_inside_nav {
+		justify-content: space-between;
+		padding-bottom: 35px;
+	}
+	.footer_inside_nav_item {
+		width: 50%;
+	}
+	.footer_inside_nav_contact-us {
+		width: 100%;
+	}
+	.footer_inside_copyright {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.footer-logo {
+		position: static;
+		margin-top: 20px;
+		img {
+			width: 150px;
+		}
+
+	}
+	// footer END
+
+	// Services section
+	.services-section_row_col_title {
+		font-size: 70%;
+		bottom: 5%;
+		left: 7%;
+	}
+	
+	.services-section {
+		margin-top: 60px;
+	}
+	.services-section_row {
+		margin-top: 40px;
+	}
+	// Services section END
+
+	// Testimonials section
+	.testimonials-section {
+		margin-top: 50px;
+		margin-bottom: 80px;
+	}
+	// Testimonials section END
+
+	// Why Doon Page
+	
+	.why-doon_page-content {
+		padding-left: 0;
+		width: 100%;
+	}
+	.why-doon_page-content_inside__left, .why-doon_page-content_inside__right {
+		width: 100%;
+	}
+
+	// Why Doon page END
+
+
+	// Service Areas Page
+
+	.service-areas_list {
+		font-size: 0.9em;
+	}
+
+	// Service Areas Page END
+
+
+	// Houses and Land Packages Page
+
+	.houses-and-land_page-content {
+		.page-title {
+			font-size: 75%;
+		}
+	}
+
+	// Houses and Land Packages Page END
+
+	// Contact Us Page
+	
+	.message-area {
+		height: 150px;
+	}
+
+	.form-button {
+		width: 230px;
+		height: 70px;
+		font-size: 1.25em;
+		border: none;
+		margin-top: 60px;
+	}
+
+	// Contact Us Page END
+
+	// Our Designs Page
+	.tab-content_item {
+		flex-wrap: wrap;
+	}
+
+	.tab-content_item__left {
+		width: 100%;
+		order: 1;
+		.explore_btn {
+			display: none;
+		}
+	}
+
+	.tab-content_item__right {
+		order: 2;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 30px;
+		align-items: center;
+		img:not(.zoom-in) {
+			width: 80%;
+		}
+		.explore_btn {
+			display: block;
+		}
+	}
+
+	.explore_btn {
+		margin: 0 auto;
+		margin-top: 34px;
+	}
+
+	.tab-content_item__spec {
+		width: 75%;
+	}
+
+	.zoom-in {
+		right: 0%;
+		top: 0px;
+	}
+
+	// Our Designs Page END
+
+}
+
+@media screen and (max-width: 388px) {
+	.custom-homes_inside h1 {
+		font-size: 1.8em;
+	}
+	.green-circle-sm-2 {
+		top: 35px;
+		left: 139px;
+	}
+
+	.footer-logo {
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		img:last-child {
+			margin: 20px 0 0 0;
+		}
+	}
+
+	.popup_img {
+		margin-top: 15%;
+		
+	}
+
+	.close {
+		top: 2%;
+		right: 3%;
+	}
+
+	.explore-item__left {
+		.tab-content_item__spec {
+			width: 50%;
+			span {
+				width: 5%;
+			}
+		}
+	}
+
+}
+
+
+
+// Responsive END
